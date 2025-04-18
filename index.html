@@ -46,7 +46,6 @@
             color: #0f0;
             overflow: hidden;
             margin: 0 auto 50px;
-            position: relative;
         }
         
         .island::before {
@@ -420,15 +419,6 @@
             skills.forEach(skill => {
                 const width = skill.getAttribute('data-width');
                 skill.style.width = width + '%';
-            });
-        });
-        
-        window.addEventListener('scroll', () => {
-            const islands = document.querySelectorAll('.island');
-            islands.forEach((island, index) => {
-                const speed = 0.1 + (index * 0.05);
-                const yPos = -(window.scrollY * speed);
-                island.style.transform = `translate(-50%, calc(-50% + ${yPos}px))`;
             });
         });
     </script>
